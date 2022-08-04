@@ -1,22 +1,40 @@
-﻿using ApiPlayground.Models;
+﻿using ApiPlayground.Data;
+using ApiPlayground.Models;
+using ApiPlayground.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiPlayground.Controllers
 {
-    [Route("api/VillaAPI")]
+    [Route("api/villaAPI")]
     [ApiController]
     
     public class VillaAPIController : ControllerBase
     {
         [HttpGet]
-        public IEnumerable<Villa> GetVillas()
+        public ActionResult <IEnumerable<VillaDTO>> GetVillas()
         {
-            
-            return new List<Villa>
+
+            return Ok(VillaStore.villaList);
+        }
+
+        [HttpGet("{id:int}")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(400)]
+        public ActionResult<VillaDTO> GetVilla(int id)
+        {
+            if (id==0)
             {
-                new Villa { Id = 1, Name ="Pool View"},
-                new Villa { Id = 2, Name ="Beach View"}
-            };
+                return BadRequest();
+
+            }
+            var villa = VillaStore.villaList.FirstOrDefault(u => u.Id == id);
+            if (villa == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(villa);
         }
     }
 }
