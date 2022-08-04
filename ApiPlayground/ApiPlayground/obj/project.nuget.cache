@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hoFbkkhHzrIGHmBB43ymyiD6kIupjvnyuIAFXzqAx/AulhOYcfPumQfYbBV9dsHeMthoFMKpRhZt9sY3nxKDpA==",
+  "dgSpecHash": "lyughUHVgwsdI/Ief50uCSNpZJ6uNd92MQ8X1VfUw1LAdxMzFsWTkU713j3ngstN6W9ARW16ZT92b6cFCrKD3w==",
   "success": true,
-  "projectFilePath": "C:\\Materiały z kursu\\API\\ApiPlayground\\ApiPlayground\\ApiPlayground\\ApiPlayground.csproj",
+  "projectFilePath": "D:\\Moje\\ApiPlayground\\ApiPlayground\\ApiPlayground\\ApiPlayground.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sssal\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\sssal\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
